@@ -5,21 +5,59 @@ import random
 from deta import Deta
 import os
 
+# Route to the Start Page - template
 @app.route('/', methods=["GET"])
 def home():
+    """Calls the Start Page for this Api Project with some info.
+    ---
+    get:
+      description: Get start page of Project
+      security:
+        - ApiKeyAuth: []
+      responses:
+        200:
+          description: return an HTML document
+          content:
+            text/html
+    """
     deta_path = os.getenv("DETA_PATH")
-    deta_domain = f"https://{deta_path}.deta.dev"
-    date_string = str(datetime.datetime.today().strftime('%Y-%m-%d'))
+    enviroment = {}
+    enviroment['domain'] = f"https://{deta_path}.deta.dev"
+    enviroment['call_date'] = str(datetime.datetime.today().strftime('%Y-%m-%d'))
     #return f'<h1>First Try on API Design</h1><p>This site is a prototype API.</p><p>This has been called {date_string}</p></br><p><a href="https://eelv58.deta.dev/template">All Api Calls listed</a></p><p>Admin Email:  {admin_email}</p>'
-    return render_template('docu.html')
+    return render_template('home.html', enviroment=enviroment)
 
+# Route to the documentation page - template
 @app.route('/docu')
 def template():
-    return render_template('docu.html')
+    """Calls the docu Page for this Api Project with some info.
+    ---
+    get:
+      description: Get docu page of Project
+      security:
+        - ApiKeyAuth: []
+      responses:
+        200:
+          description: return an HTML document
+          content:
+            text/html
+    """
+    deta_path = os.getenv("DETA_PATH")
+    enviroment = {}
+    enviroment['domain'] = f"https://{deta_path}.deta.dev"
+    enviroment['call_date'] = str(datetime.datetime.today().strftime('%Y-%m-%d'))
+    return render_template('docu.html', enviroment=enviroment)
 
 # Helper function to check if item is present in db, else put it
 # Returns a dict with either inserted or present 
 def put_excuses(data):
+    """Executes db entry if element not already present.
+    ---
+    Input:
+
+    Output:
+
+    """
     deta = Deta()
     excuses = deta.Base('excuses')
     fetch_result=excuses.fetch({"content": data["content"]})
@@ -36,15 +74,15 @@ def put_excuses(data):
 # A route to return all of the available entries in data.
 @app.route('/api/v1/excuses/putall', methods=['GET'])
 def api_put_all():
-    """DESCRIPTION.
+    """This is the base get call that executes filling the database.
     ---
     get:
-      description: Get all excuses in db
+      description: Get all excuses in db with the value if they were inserted or present
       security:
         - ApiKeyAuth: []
       responses:
         200:
-          description: return all excuses
+          description: return all excuses in 2 dictionaries
           content:
             application/json:
               schema: Excuse shemata
