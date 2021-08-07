@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>This is the description of the Endpoints</title>
+  </head>
+
+  <body>
+    <h1>Description of the Excuse Mongoose Backend Api on {{ enviroment.domain }}</h1>
+    <p>This is the docu page of the deta api called "Excuse Mongoose Backend Api".</p>
+    <h2>Endpoints of Test Api</h2>
+    <ul>
+      <li><a href="{{ enviroment.domain }}/api/v1/excuses/all">All Excuses in the database listed</a></li>      
+      <li><a href="{{ enviroment.domain }}/api/v1/excuses/putall">All Excuses as a start inserted</a></li>
+      <li><a href="{{ enviroment.domain }}/api/v1/excuses/random">One random Excuse</a></li>
+      <li><a href="{{ enviroment.domain }}/api/v1/excuses/custom?name=Falko">Custome excuse to Falko</a></li>
+      <li><a href="{{ enviroment.domain }}/api/v1/excuses/custom">Error Page for custom</a></li>
+    </ul>
+  </body>
+</html>
