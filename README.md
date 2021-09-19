@@ -15,6 +15,7 @@ A web based Excuse Generator as Proof of Concept
 - Train Documentation integrated into the Process
   - Automated Documentation out of inline comments
 - Train different CI/CD methods
+  - Git Workflow, specialy feature branching
   - Automated Testing
   - GitHub Actions to Deta
   - GitHub Actions to Docker
