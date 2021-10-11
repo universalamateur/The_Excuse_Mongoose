@@ -1,1 +1,55 @@
-<mxfile host="app.diagrams.net" modified="2021-10-11T13:15:54.731Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" version="15.5.0" etag="xdnw3Ha385eLxwZ0AcJS" type="github"><diagram id="u6FuRxvIENz0sCl4oHch">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-10-11T13:24:57.505Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="zRri8ra0OpQ8GSEJgb5Q" version="15.5.0" type="github">
+  <diagram id="u6FuRxvIENz0sCl4oHch" name="Page-1">
+    <mxGraphModel dx="2249" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CnExRzKJuUDG11Lil8nh-13" value="Backend" style="swimlane;fillColor=#CCFFFF;gradientColor=#ffffff;swimlaneFillColor=#CCFFFF;" vertex="1" parent="1">
+          <mxGeometry x="470" y="70" width="340" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-1" value="The Excuse API" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="190" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-2" value="Excuses DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="720" y="300" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-3" value="Frontend&lt;br&gt;(JS, React)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-4" value="User" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="230" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-5" value="Desktop Browser" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.533;entryY=0.363;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="CnExRzKJuUDG11Lil8nh-1" target="CnExRzKJuUDG11Lil8nh-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="370" as="sourcePoint" />
+            <mxPoint x="670" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-10" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="CnExRzKJuUDG11Lil8nh-3" target="CnExRzKJuUDG11Lil8nh-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="150" as="sourcePoint" />
+            <mxPoint x="560" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="CnExRzKJuUDG11Lil8nh-5" target="CnExRzKJuUDG11Lil8nh-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="260" as="sourcePoint" />
+            <mxPoint x="330" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-12" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="CnExRzKJuUDG11Lil8nh-4" target="CnExRzKJuUDG11Lil8nh-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="200" as="sourcePoint" />
+            <mxPoint x="110" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CnExRzKJuUDG11Lil8nh-14" value="Frontend" style="swimlane;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="130" y="70" width="340" height="540" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
