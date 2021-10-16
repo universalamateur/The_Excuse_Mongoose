@@ -4,12 +4,14 @@
 
 ## Project Summary
 
-A web application that can be accesses by erveryone and produces a random funny Excuse out of a dataset.
+A client-server web application, which can be accesses by erveryone and produces a random funny Excuse out of a dataset.
 The Excuse can be personalised or generic and can be displayed in different formats for easy sharing in social media.
 The Excuse dataset can be updated by autghorized users.
 Excuses can be provided with SFW and/or NFSW content.
 
-## Project Goals
+As a visiting user, I want to share a small image with a funny personalized Excuse, so that in any chat client, this image is delivered to my recipients and produces a smile.
+
+## Project Goals (None Smart)
 
 - Understand and Train Backend design (REST API)
   - Built a Back end as restful API in Python with Flask and FastAPI as Web Framework
@@ -18,6 +20,7 @@ Excuses can be provided with SFW and/or NFSW content.
   - Spec-driven development
   - Data Validation
   - Security Concepts
+- Create an API interacting with a database, in which the excuses in 3 parts are stored, read from, can be updated, created, listed and deleted.
 - Understand and train Web Application design
   - Built a Front end web application in REACT
   - Unit tests and Integration tests
@@ -32,6 +35,8 @@ Excuses can be provided with SFW and/or NFSW content.
   - GitHub Actions to Deta
   - GitHub Actions to Docker
   - GitHub Actions to a Kubernetes Cluster
+- Built a ontinuous integration (CI) and continuous deployment (CD) workflow directly from the GitHub repository with GitHub Actions into the dev enviroment on deta.sh.
+- Setup Pipelines into a docker instance and later add a Kubernetes setup to the deployment.
 
 ## Deliverables
 
